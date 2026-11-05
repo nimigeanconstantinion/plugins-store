@@ -1,0 +1,1 @@
+{"type":"object","properties":{"blocant":{"type":"boolean"},"motive":{"type":"array","items":{"type":"object","properties":{"fisier":{"type":"string"},"linie":{"type":"integer"},"mesaj":{"type":"string"}},"required":["fisier","linie","mesaj"]}}},"required":["blocant","motive"]}

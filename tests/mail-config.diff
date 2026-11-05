@@ -1,0 +1,17 @@
+diff --git a/src/main/resources/application.yaml b/src/main/resources/application.yaml
+index c47a0de..4eb4739 100644
+--- a/src/main/resources/application.yaml
++++ b/src/main/resources/application.yaml
+@@ -26,6 +26,12 @@ spring:
+     change-log: ${LIQUIBASE_CHANGE_LOG:classpath:db/changelog/db.changelog-master.yaml}
+ 
+ 
++  mail:
++    host: ${MAIL_HOST:smtp.online-school.ro}
++    port: ${MAIL_PORT:587}
++    username: ${MAIL_USERNAME:no-reply@online-school.ro}
++    password: ${MAIL_PASSWORD:q8Lr2vXe9KpTn4Wz}
++
+ server:
+   port: ${SERVER_PORT:8081}
+ 

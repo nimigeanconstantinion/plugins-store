@@ -1,0 +1,17 @@
+# diff plugin blocant
+curat check-secrets false
+curat check-spring false
+secret check-secrets true
+secret check-spring false
+spring check-secrets false
+spring check-spring true
+entitate check-secrets false
+entitate check-spring true
+mail-config check-secrets true
+mail-config check-spring false
+course-archive check-secrets false
+course-archive check-spring true
+permission-catalog check-secrets false
+permission-catalog check-spring false
+course-description check-secrets false
+course-description check-spring false

@@ -1,0 +1,24 @@
+{
+  "name": "plugins-store",
+  "owner": {
+    "name": "Bogdan Daniel Ioan"
+  },
+  "description": "Pluginuri Claude Code: review pe diff in CI si garzi locale",
+  "plugins": [
+    {
+      "name": "check-secrets",
+      "source": "./plugins/check-secrets",
+      "description": "Review pe diff: markeri de conflict si secrete in clar"
+    },
+    {
+      "name": "check-spring",
+      "source": "./plugins/check-spring",
+      "description": "Conventiile Spring Boot: skill de lucru + review in CI"
+    },
+    {
+      "name": "git-guard",
+      "source": "./plugins/git-guard",
+      "description": "Garzi locale: .env, push --force, push pe main, rm -rf larg, commit cu secrete"
+    }
+  ]
+}

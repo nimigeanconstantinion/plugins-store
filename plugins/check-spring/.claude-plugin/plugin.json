@@ -1,0 +1,8 @@
+{
+  "name": "check-spring",
+  "version": "0.1.1",
+  "description": "Conventiile Spring Boot ale proiectului: skill de lucru + review in CI",
+  "author": {
+    "name": "Bogdan Daniel Ioan"
+  }
+}

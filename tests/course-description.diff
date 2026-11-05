@@ -1,0 +1,26 @@
+diff --git a/src/main/java/com/example/springbd3big/course/model/Course.java b/src/main/java/com/example/springbd3big/course/model/Course.java
+index cfc729c..a2dc45a 100644
+--- a/src/main/java/com/example/springbd3big/course/model/Course.java
++++ b/src/main/java/com/example/springbd3big/course/model/Course.java
+@@ -40,6 +40,9 @@ public class Course {
+     @NotBlank
+     private String departament;
+ 
++    @Column(name = "description")
++    private String description;
++
+     @Override
+     public String toString(){
+         return "Id: " + id + "CourseName: " + courseName + "Department: " + departament;
+diff --git a/src/main/resources/db/changelog/changes/001-initial-schema-and-seed.sql b/src/main/resources/db/changelog/changes/001-initial-schema-and-seed.sql
+index d687684..fcb4671 100644
+--- a/src/main/resources/db/changelog/changes/001-initial-schema-and-seed.sql
++++ b/src/main/resources/db/changelog/changes/001-initial-schema-and-seed.sql
+@@ -60,6 +60,7 @@ CREATE TABLE course (
+     id INT NOT NULL AUTO_INCREMENT,
+     course_name VARCHAR(255) NOT NULL,
+     department VARCHAR(255) NOT NULL,
++    description VARCHAR(500),
+     PRIMARY KEY (id)
+ );
+ 

@@ -1,0 +1,28 @@
+diff --git a/src/main/java/ro/mycode/user_management/users/controllers/ExportController.java b/src/main/java/ro/mycode/user_management/users/controllers/ExportController.java
+new file mode 100644
+--- /dev/null
++++ b/src/main/java/ro/mycode/user_management/users/controllers/ExportController.java
+@@ -0,0 +1,22 @@
++package ro.mycode.user_management.users.controllers;
++
++import org.springframework.web.bind.annotation.*;
++import ro.mycode.user_management.users.models.User;
++import ro.mycode.user_management.users.repository.UserRepository;
++
++import java.util.List;
++
++@RestController
++@RequestMapping("/api/v1/export")
++public class ExportController {
++
++    private final UserRepository userRepository;
++
++    public ExportController(UserRepository userRepository) {
++        this.userRepository = userRepository;
++    }
++
++    @GetMapping("/users")
++    public List<User> users() {
++        return userRepository.findAll();
++    }
++}

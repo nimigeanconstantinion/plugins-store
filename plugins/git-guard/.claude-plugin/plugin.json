@@ -1,0 +1,8 @@
+{
+  "name": "git-guard",
+  "version": "0.2.0",
+  "description": "Garzi locale: .env, push --force, push pe main, rm -rf larg, commit cu secrete in stage",
+  "author": {
+    "name": "Bogdan Daniel Ioan"
+  }
+}

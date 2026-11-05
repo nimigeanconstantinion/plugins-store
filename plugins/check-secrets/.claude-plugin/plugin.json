@@ -1,0 +1,8 @@
+{
+  "name": "check-secrets",
+  "version": "0.1.0",
+  "description": "Review pe diff: markeri de conflict si secrete in clar",
+  "author": {
+    "name": "Bogdan Daniel Ioan"
+  }
+}
