@@ -25,4 +25,9 @@ if [ -n "$GITHUB_STEP_SUMMARY" ]; then
   cat "/tmp/verdict-$plugin.md" >> "$GITHUB_STEP_SUMMARY"
 fi
 
+jq --arg p "$plugin" '[.structured_output.motive[]
+  | {path: .fisier, line: .linie, side: "RIGHT",
+     body: "**\($p)**: \(.mesaj)"}]' \
+  /tmp/verdict.json > "/tmp/comments-$plugin.json"
+
 jq -e '.structured_output.blocant == false' /tmp/verdict.json > /dev/null
