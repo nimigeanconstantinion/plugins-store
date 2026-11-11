@@ -19,6 +19,11 @@
       "name": "git-guard",
       "source": "./plugins/git-guard",
       "description": "Garzi locale: .env, push --force, push pe main, rm -rf larg, commit cu secrete"
+    },
+    {
+      "name": "check-liquibase",
+      "source": "./plugins/check-liquibase",
+      "description": "Review pe diff: changeset-uri Liquibase existente modificate sau include-uri sterse din master"
     }
   ]
 }

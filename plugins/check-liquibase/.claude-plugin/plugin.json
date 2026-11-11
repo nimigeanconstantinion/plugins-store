@@ -1,0 +1,8 @@
+{
+  "name": "check-liquibase",
+  "version": "0.1.0",
+  "description": "Review pe diff: changeset-uri Liquibase existente modificate sau include-uri sterse din master",
+  "author": {
+    "name": "Bogdan Daniel Ioan"
+  }
+}

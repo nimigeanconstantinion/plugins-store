@@ -1,0 +1,36 @@
+diff --git a/src/main/java/com/example/springbd3big/course/model/Course.java b/src/main/java/com/example/springbd3big/course/model/Course.java
+index cfc729c..a2dc45a 100644
+--- a/src/main/java/com/example/springbd3big/course/model/Course.java
++++ b/src/main/java/com/example/springbd3big/course/model/Course.java
+@@ -40,6 +40,9 @@ public class Course {
+     @NotBlank
+     private String departament;
+
++    @Column(name = "description")
++    private String description;
++
+     @Override
+     public String toString(){
+         return "Id: " + id + "CourseName: " + courseName + "Department: " + departament;
+diff --git a/src/main/resources/db/changelog/changes/003-add-course-description.sql b/src/main/resources/db/changelog/changes/003-add-course-description.sql
+new file mode 100644
+index 0000000..5b1e7c2
+--- /dev/null
++++ b/src/main/resources/db/changelog/changes/003-add-course-description.sql
+@@ -0,0 +1,5 @@
++--liquibase formatted sql
++
++--changeset springbd3big:003-add-course-description
++ALTER TABLE course ADD COLUMN description VARCHAR(500);
++--rollback ALTER TABLE course DROP COLUMN description;
+diff --git a/src/main/resources/db/changelog/db.changelog-master.yaml b/src/main/resources/db/changelog/db.changelog-master.yaml
+index 8e41a0d..c93f2b6 100644
+--- a/src/main/resources/db/changelog/db.changelog-master.yaml
++++ b/src/main/resources/db/changelog/db.changelog-master.yaml
+@@ -2,4 +2,6 @@ databaseChangeLog:
+   - include:
+       file: db/changelog/changes/001-initial-schema-and-seed.sql
+   - include:
+       file: db/changelog/changes/002-permissions-seed.sql
++  - include:
++      file: db/changelog/changes/003-add-course-description.sql

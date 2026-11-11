@@ -15,3 +15,14 @@ permission-catalog check-secrets false
 permission-catalog check-spring false
 course-description check-secrets false
 course-description check-spring false
+migrare-noua check-secrets false
+migrare-noua check-spring false
+curat check-liquibase false
+secret check-liquibase false
+spring check-liquibase false
+entitate check-liquibase false
+mail-config check-liquibase false
+course-archive check-liquibase false
+permission-catalog check-liquibase false
+course-description check-liquibase true
+migrare-noua check-liquibase false
